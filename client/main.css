@@ -1,0 +1,9 @@
+body > div {
+  padding: 40px 20px 15px ;
+  border-bottom:1px solid grey;
+  font-family: sans-serif;
+}
+
+table th, table td{
+  padding: 10px;
+}
