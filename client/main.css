@@ -1,6 +1,5 @@
 body > div {
   padding: 10px 10px 10px ;
-  border-bottom:1px solid grey;
   font-family: sans-serif;
 }
 
@@ -11,16 +10,16 @@ table th, table td{
 #eit_data_form {
     width: 30%;
     padding: 12px 20px 15px 10px;
-    display: inline-block;
     border: 1px solid #ccc;
     border-radius: 4px;
     box-sizing: border-box;
     background-color: #f2f2f2;
-   
+    margin: 0 auto;
 }
 
 h1 {
-  margin:0px;
+  
+
 }
 
 #sub {
@@ -35,3 +34,34 @@ h1 {
 
 }
 
+#deleteEit {
+  width: 80px;
+  background-color: rgb(224, 24, 124);
+  color: white;
+  padding: 10px 10px;
+  margin: 5px 0;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  float: center;
+}
+
+table {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+th, td {
+  text-align: left;
+  padding: 8px;
+}
+
+tr:nth-child(even){background-color: #f2f2f2}
+
+th {
+  background-color: rgb(51, 110, 53);
+  color: white;
+  font-display: arial;
+  font-kerning: normal;
+  font-weight: 100;
+}
