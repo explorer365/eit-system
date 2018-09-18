@@ -1,35 +1,42 @@
 <head>
-        <title>EIT Management</title>
-      </head>
+    <title>EIT Management System</title>
+</head>
       <body>
-        <h1>The Management System</h1>
-
+          {{> loginButtons}}
+        <h1>The EMS </h1>
+        {{#if currentUser}}
         {{> Eit_data_form}}
+        {{/if}}
           
         <div>
-          <button style ="float:right;">Delete </button>
+            {{#if currentUser}}
+          <button id="deleteEit" style ="float:right;">Delete </button>
+          {{/if}}
         </div>
     
         <div>
             <table>
-              <thead>
-                <th></th>
-                <th>Full Name</th>
-                <th>Gender</th>
-                <th>Date of Birth</th>
-                <th>Country</th>
-                <th>Cohort</th>
-              </thead>
+                <thead>
+                    <th></th>
+                    <th>Full Name</th>
+                    <th>Gender</th>
+                    <th>Date of Birth</th>
+                </thead>
     
               <tbody>
+                  {{ #each eits}}
                 <tr>
-                  <td><input type = "checkbox"></td>
-                <td>John/ James Doe</td>
-                <td>Male/Female</td>
-                <td>dd/mm/yyyy</td>
-                <td>KE/GH/NG</td>
-                <td>2019</td>
-              </tr>
+                    <td> 
+                    {{#if currentUser }}
+                    <input type = "checkbox" class="delete-checkbox" value="{{_id}}"/>
+                    {{/if}}
+                    </td>
+                    <td>{{first_name}}{{last_name}}</td>
+                    <td>{{gender}}</td>
+                    <td>{{date_of_birth}}</td>
+                    <td> <button class = "update-eit" id = "{{_id}}"> Update </button> </td>               
+                </tr>
+                 {{ /each}}
               </tbody>
             </table>
         </div>
